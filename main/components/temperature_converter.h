@@ -1,0 +1,13 @@
+#include <stdint.h>
+#include "driver/spi_master.h"
+#include "hal/spi_types.h"
+#include "esp_log.h"
+#include <math.h>
+
+#define MAX6675_MISO_GPIO 37
+#define MAX6675_SCK_GPIO 36
+#define MAX6675_CS_GPIO 35
+
+void max6675_init(void);
+
+float max6675_read_temperature(void);

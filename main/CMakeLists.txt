@@ -1,0 +1,20 @@
+idf_component_register(
+    SRCS 
+        "main.c"
+        "components/temperature_converter.c"
+        "components/pid_control.c"
+        "components/mqtt_configuration.c"
+        "components/wifi_connect.c"
+
+    INCLUDE_DIRS 
+        "."
+        "components/utils"
+    REQUIRES
+        esp_adc 
+        esp_driver_ledc
+        esp_wifi
+        esp_hal_gpspi
+        esp_driver_spi
+        nvs_flash
+        esp_driver_gpio
+)
